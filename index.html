@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>0-11 單字聽音辨義測驗</title>
+  <title>0-11 單字聽音辨義挑戰</title>
   <style>
     body {
       font-family: sans-serif;
@@ -98,7 +98,7 @@
 
   <div id="game-container" class="hidden">
     <img src="logo.png" alt="Logo" id="logo" />
-    <div id="game-title">0-11 單字聽音辨義測驗</div>
+    <div id="game-title">0-11 單字聽音辨義挑戰</div>
     <p id="question-number">第 1 題 / 共 33 題</p>
     <p id="timer">剩餘時間：-- 秒</p>
 
@@ -108,7 +108,7 @@
     <button id="next-btn" disabled>下一題</button>
 
     <div id="result" class="hidden">
-      <h2>🎯 測驗完成！</h2>
+      <h2>🎯 挑戰完成！</h2>
       <p id="score-text"></p>
       <p id="pass-fail"></p>
 
@@ -127,7 +127,7 @@
   </div>
 
   <script>
-    const gameTitle = "0-11 單字聽音辨義測驗";
+    const gameTitle = "0-11 單字聽音辨義挑戰";
 
     const questions = [
   { "word": "演員", "korean": "배우", "audio": "audio/001101W.mp3", "choices": ["導演", "演員", "歌手"] },
@@ -342,10 +342,10 @@
       }
 
       if (percent >= 80 && !timeOver) {
-        passFailText.textContent = "🎉 成績合格！可重新測驗";
+        passFailText.textContent = "🎉 成績合格！可重新挑戰";
         submitBtn.disabled = false;
       } else {
-        passFailText.textContent = timeOver ? "❌ 時間到 — 成績不合格" : "❌ 成績不合格，請重新測驗";
+        passFailText.textContent = timeOver ? "❌ 時間到 — 成績不合格" : "❌ 成績不合格，請重新挑戰";
         submitBtn.disabled = true;
       }
 
